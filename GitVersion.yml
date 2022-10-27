@@ -1,0 +1,28 @@
+mode: mainline
+branches:
+  master:
+    tag: ''
+    increment: Patch
+  bugfix:
+    tag: alpha.{BranchName}
+    increment: None
+    regex: ^[Bb]ugfix[/-]
+    source-branches: [master]
+  fix:
+    tag: alpha.{BranchName}
+    increment: None
+    regex: ^[Ff]ix[/-]
+    source-branches: [master]
+  feature:
+    tag: alpha.{BranchName}
+    increment: None
+    regex: ^[Ff]eature[/-]
+    source-branches: [master]
+  pull-request:
+    tag: alpha-pull
+    tag-number-pattern: '[/-](?<number>\d+)[-/]'
+  support:    
+    tag: alpha.{BranchName}
+    increment: Patch  
+ignore:
+  sha: []

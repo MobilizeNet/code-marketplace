@@ -1,0 +1,11 @@
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: code-marketplace-bds-code-marketplace
+spec:
+  storageClassName: azure-files-${ENVTYPE}-code-marketplace
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: ${STORAGE_CLASS_CAPACITY_MARKETPLACE}

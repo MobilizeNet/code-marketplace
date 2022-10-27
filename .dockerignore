@@ -1,0 +1,10 @@
+.git
+.github
+.vscode
+*.md
+LICENSEE
+flake.*
+coverage
+docker-bake.hcl
+Dockerfile
+Dockerfile.testing

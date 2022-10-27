@@ -1,0 +1,15 @@
+kind: StorageClass
+apiVersion: storage.k8s.io/v1
+metadata:
+  name: azure-files-${ENVTYPE}-code-marketplace
+provisioner: file.csi.azure.com
+parameters:
+  skuName: Premium_LRS
+  resourceGroup: ${VOLUMES_STORAGE_ACCOUNT_RG}
+  storageAccount: ${VOLUMES_STORAGE_ACCOUNT_NAME}
+reclaimPolicy: Delete
+mountOptions:
+  - uid=1000
+  - gid=100
+allowVolumeExpansion: true
+volumeBindingMode: Immediate
